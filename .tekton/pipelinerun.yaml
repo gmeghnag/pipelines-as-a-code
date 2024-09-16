@@ -10,4 +10,4 @@ spec:
           - name: hello
             image: registry.access.redhat.com/ubi8/ubi
             script: |
-              echo "Hello, Tekton; this is a PR!"
+              echo "Hello, Tekton; this is a PR!!"
