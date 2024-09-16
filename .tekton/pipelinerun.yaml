@@ -3,7 +3,7 @@ kind: PipelineRun
 metadata:
   name: simple-pipelinerun
   annotation:
-    pipelinesascode.tekton.dev/on-event: "[pull_request, push]"
+    pipelinesascode.tekton.dev/on-event: "[pull_request]"
 spec:
   tasks:
     - name: simple-task
