@@ -2,8 +2,13 @@ apiVersion: tekton.dev/v1beta1
 kind: PipelineRun
 metadata:
   name: simple-pipelinerun
+<<<<<<< HEAD
   annotations:
     pipelinesascode.tekton.dev/on-event: "[pull_request, push]"
+=======
+  annotation:
+    pipelinesascode.tekton.dev/on-event: "[pull_request]"
+>>>>>>> afb90c8 (modified annotations on PR CI)
 spec:
   tasks:
     - name: simple-task
