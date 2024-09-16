@@ -1,0 +1,15 @@
+apiVersion: tekton.dev/v1beta1
+kind: PipelineRun
+metadata:
+  name: simple-pipelinerun
+  annotations:
+    pipelinesascode.tekton.dev/on-event: "[pull_request]"
+spec:
+  tasks:
+    - name: simple-task
+      taskSpec:
+        steps:
+          - name: hello
+            image: registry.access.redhat.com/ubi8/ubi
+            script: |
+              echo "Hello, Tekton; this is a PR!!"
